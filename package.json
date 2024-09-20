@@ -1,0 +1,86 @@
+{
+  "publisher": "Gahotx",
+  "name": "smart-dot",
+  "displayName": "Smart Dot",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@9.7.1",
+  "description": "Code Completion With Smart Dot",
+  "author": "Gahotx <gahotx@163.com>",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/Gahotx",
+  "homepage": "https://github.com/Gahotx/vscode-smart-dot#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gahotx/vscode-smart-dot"
+  },
+  "bugs": {
+    "url": "https://github.com/Gahotx/vscode-smart-dot/issues"
+  },
+  "sponsor": {
+    "url": "https://github.com/sponsors/Gahotx"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./dist/index.js",
+  "icon": "res/icon.png",
+  "files": [
+    "LICENSE.md",
+    "dist/*",
+    "res/*"
+  ],
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "commands": [],
+    "configuration": {
+      "type": "object",
+      "title": "Smart Dot",
+      "properties": {
+        "smartDot.languages": {
+          "type": "array",
+          "description": "Smart Dot supported languages"
+        },
+        "smartDot.options": {
+          "type": "array",
+          "description": "Smart Dot format options"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --external vscode",
+    "dev": "nr build --watch",
+    "prepare": "nr update",
+    "update": "vscode-ext-gen --output src/generated/meta.ts",
+    "lint": "eslint .",
+    "vscode:prepublish": "nr build",
+    "publish": "vsce publish --no-dependencies",
+    "pack": "vsce package --no-dependencies",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "release": "bumpp && nr publish"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.26.0",
+    "@antfu/ni": "^0.22.4",
+    "@types/node": "^22.4.1",
+    "@types/vscode": "^1.92.0",
+    "@vscode/vsce": "^3.0.0",
+    "bumpp": "^9.5.1",
+    "eslint": "^9.9.0",
+    "esno": "^4.7.0",
+    "pnpm": "^9.7.1",
+    "reactive-vscode": "^0.2.0",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.1",
+    "vitest": "^2.0.5",
+    "vscode-ext-gen": "^0.4.1"
+  }
+}
