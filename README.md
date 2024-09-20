@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-Code Completion With Smart Dot for VS Code<br>
+Code completion with smart dot<br>
 </p>
 
 ## Configurations

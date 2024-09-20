@@ -5,7 +5,7 @@
   "version": "0.0.4",
   "private": true,
   "packageManager": "pnpm@9.7.1",
-  "description": "Code Completion With Smart Dot",
+  "description": "Code completion with smart dot",
   "author": "Gahotx <gahotx@163.com>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/Gahotx",
