@@ -1,7 +1,5 @@
-# Smart Dot
-
 <p align="center">
-<img src="https://raw.githubusercontent.com/Gahotx/vscode-smart-dot/main/res/icon.png" height="150">
+<img src="https://raw.githubusercontent.com/Gahotx/vscode-smart-dot/master/res/icon.png" height="150">
 </p>
 
 <h1 align="center">Smart Dot <sup>VS Code</sup></h1>
