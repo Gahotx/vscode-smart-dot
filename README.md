@@ -133,6 +133,7 @@ Code completion with smart dot<br>
 - [dot-log](https://github.com/jaluik/dot-log)
 - [dot-thing](https://github.com/vtrbo/dot-thing)
 - [dot-more](https://github.com/AlanQtten/dot-more)
+- [smart-clicks](https://github.com/antfu/vscode-smart-clicks)
 - [starter-vscode](https://github.com/antfu/starter-vscode)
 
 ## License
