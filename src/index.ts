@@ -31,6 +31,7 @@ function setDocumentCommand() {
       }
 
       let insertContent = typeof option.format === 'string' ? option.format : option.format.join(spaceFill)
+      // $cursor 的行位置
       const cursorPositionLine = typeof option.format === 'string' ? 0 : option.format.findIndex((m: string) => m.includes('$cursor'))
 
       // 替换其他变量
@@ -50,9 +51,14 @@ function setDocumentCommand() {
         insertContent = insertContent.replace(regex, 'console.$1(')
       }
 
-      // 找到 $cursor 的位置
-      const cursorPositionIndex = cursorPositionLine !== -1 ? insertContent.split('\n')[cursorPositionLine].indexOf('$cursor') : -1
-
+      // $cursor 的列位置
+      let cursorPositionIndex = -1
+      if (cursorPositionLine !== -1) {
+        if (typeof option.format === 'string')
+          cursorPositionIndex = insertContent.indexOf('$cursor') + positionIndex - 2
+        else
+          cursorPositionIndex = insertContent.split('\n')[cursorPositionLine].indexOf('$cursor')
+      }
       // 替换 $cursor
       insertContent = insertContent.replace('$cursor', '')
 
