@@ -21,9 +21,12 @@ export default [
   {
     target: 'watch',
     format: [
-      'watch(() => $value, (newValue, oldValue) => {',
-      '  $cursor',
-      '})',
+      'watch(',
+      '  () => $value,',
+      '  (newValue, oldValue) => {',
+      '    $cursor',
+      '  }',
+      ')',
     ],
     desc: 'watch(() => $value, (newValue, oldValue) => {})',
   },
