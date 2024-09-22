@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://raw.githubusercontent.com/Gahotx/vscode-smart-dot/master/res/icon.png" height="150">
+<img src="https://raw.githubusercontent.com/Gahotx/vscode-smart-dot/master/res/icon.png" alt="icon" height="150">
 </p>
 
 <h1 align="center">Smart Dot <sup>VS Code</sup></h1>
@@ -10,6 +10,26 @@
 
 <p align="center">
 Code completion with smart dot<br>
+</p>
+
+## Usage Examples
+
+### console
+
+<p align=center>
+<img src="https://raw.githubusercontent.com/Gahotx/vscode-smart-dot/master/res/usage-examples/console.gif" alt="console" />
+</p>
+
+### array
+
+<p align=center>
+<img src="https://raw.githubusercontent.com/Gahotx/vscode-smart-dot/master/res/usage-examples/array.gif" alt="array" />
+</p>
+
+### vue
+
+<p align=center>
+<img src="https://raw.githubusercontent.com/Gahotx/vscode-smart-dot/master/res/usage-examples/vue.gif" alt="vue" />
 </p>
 
 ## Configurations
@@ -111,22 +131,22 @@ Code completion with smart dot<br>
 
 #### IOption type
 
-| key        | description                             | type               |
-| ---------- | --------------------------------------- | ------------------ |
-| target     | The target character to be replaced     | string             |
-| format     | The format of the target character      | string \| string[] |
-| desc       | The description of the option           | string             |
-| smartLabel | Whether to display $Label intelligently | boolean            |
+| key          | description                             | type               |
+| ------------ | --------------------------------------- | ------------------ |
+| `target`     | The target character to be replaced     | string             |
+| `format `    | The format of the target character      | string \| string[] |
+| `desc  `     | The description of the option           | string             |
+| `smartLabel` | Whether to display $Label intelligently | boolean            |
 
 #### Keywords in format
 
-| keyword | description                      |
-| ------- | -------------------------------- |
-| $simple | The shortened form of $stamp     |
-| $stamp  | The type of $value               |
-| $label  | The label of $value              |
-| $value  | The input value                  |
-| $cursor | The cursor position after format |
+| keyword   | description                      |
+| --------- | -------------------------------- |
+| `$simple` | The shortened form of $stamp     |
+| `$stamp`  | The type of $value               |
+| `$label`  | The label of $value              |
+| `$value`  | The input value                  |
+| `$cursor` | The cursor position after format |
 
 ## Thanks
 
