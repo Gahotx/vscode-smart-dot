@@ -134,8 +134,8 @@ Code completion with smart dot<br>
 | key          | description                             | type               |
 | ------------ | --------------------------------------- | ------------------ |
 | `target`     | The target character to be replaced     | string             |
-| `format `    | The format of the target character      | string \| string[] |
-| `desc  `     | The description of the option           | string             |
+| `format`     | The format of the target character      | string \| string[] |
+| `desc`       | The description of the option           | string             |
 | `smartLabel` | Whether to display $Label intelligently | boolean            |
 
 #### Keywords in format
