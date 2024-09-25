@@ -20,7 +20,7 @@ function setDocumentCommand() {
     const lineText = textEditor.document.lineAt(position.line).text
     const matchReg = new RegExp(`^(.*?).(${option.target})$`)
     const [lineContent, content, target] = lineText.trim().match(matchReg) || []
-    if (target) {
+    if (content && target) {
       const positionIndex = lineText.indexOf(content)
 
       let spaceFill = ''
