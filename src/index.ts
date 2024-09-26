@@ -53,14 +53,16 @@ function setDocumentCommand() {
 
       // $cursor 的列位置
       let cursorPositionIndex = -1
-      if (cursorPositionLine === 0 && insertContent.includes('$cursor')) {
-        cursorPositionIndex = insertContent.indexOf('$cursor') + positionIndex - 2
+      if (insertContent.includes('$cursor')) {
+        if (cursorPositionLine === 0) {
+          cursorPositionIndex = insertContent.indexOf('$cursor') + positionIndex - 2
+        }
+        else {
+          cursorPositionIndex = insertContent.split('\n')[cursorPositionLine].indexOf('$cursor')
+        }
+        // 替换 $cursor
+        insertContent = insertContent.replace('$cursor', '')
       }
-      else {
-        cursorPositionIndex = insertContent.split('\n')[cursorPositionLine].indexOf('$cursor')
-      }
-      // 替换 $cursor
-      insertContent = insertContent.replace('$cursor', '')
 
       edit.delete(
         new vscode.Range(
