@@ -1,3 +1,5 @@
+import type { IOption } from '../types'
+
 export default [
   {
     target: 'ref',
@@ -34,10 +36,9 @@ export default [
     target: 'watchEffect',
     format: [
       'watchEffect(() => {',
-      '  console.log($value)',
-      '  $cursor',
+      '  console.log($value)$cursor',
       '})',
     ],
     desc: 'watchEffect(() => { console.log($value) })',
   },
-]
+] as IOption[]

@@ -1,3 +1,5 @@
+import type { IOption } from '../types'
+
 export default [
   {
     target: 'log',
@@ -23,4 +25,4 @@ export default [
     desc: 'console.error(\'value\', value)',
     smartLabel: true,
   },
-]
+] as IOption[]

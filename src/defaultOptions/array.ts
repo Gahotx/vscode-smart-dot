@@ -1,3 +1,5 @@
+import type { IOption } from '../types'
+
 export default [
   {
     target: 'fori',
@@ -44,4 +46,4 @@ export default [
     ],
     desc: 'array.map((item, index) => {})',
   },
-]
+] as IOption[]

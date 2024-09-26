@@ -1,3 +1,5 @@
+import type { IOption } from '../types'
+
 export default [
   {
     target: 'forin',
@@ -8,4 +10,4 @@ export default [
     ],
     desc: 'for (const item in object) {}',
   },
-]
+] as IOption[]
