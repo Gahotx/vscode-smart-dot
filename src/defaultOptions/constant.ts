@@ -1,3 +1,5 @@
+import type { IOption } from '../types'
+
 export default [
   {
     target: 'const',
@@ -14,4 +16,9 @@ export default [
     format: 'var $value = $cursor',
     desc: 'var value = xxx',
   },
-]
+  {
+    target: 'typeof',
+    format: 'typeof $value',
+    desc: 'typeof value',
+  },
+] as IOption[]
