@@ -1,3 +1,5 @@
+import type { IOption } from '../types'
+
 export default [
   {
     target: 'if',
@@ -8,4 +10,15 @@ export default [
     ],
     desc: 'if ($value) {}',
   },
-]
+  {
+    target: 'ifelse',
+    format: [
+      'if ($value) {',
+      '  $cursor',
+      '} else {',
+      '  ',
+      '}',
+    ],
+    desc: 'if ($value) {} else {}',
+  },
+] as IOption[]
