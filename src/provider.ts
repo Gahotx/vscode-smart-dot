@@ -23,8 +23,15 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
   /**
    * @description 定义补全项
    */
-  public provideCompletionItems(_textDocument: vscode.TextDocument, position: vscode.Position): vscode.CompletionItem[] {
+  public provideCompletionItems(textDocument: vscode.TextDocument, position: vscode.Position): vscode.CompletionItem[] {
     this.position = position
+    const linePrefix = textDocument.lineAt(position).text.substring(0, position.character)
+    const matchReg = /\S[^\s.]*\.\S*$/
+
+    if (!matchReg.test(linePrefix)) {
+      return []
+    }
+
     const completions = this.options.map((m: IOption): vscode.CompletionItem => {
       const snippet: vscode.CompletionItem = {
         label: m.target,
