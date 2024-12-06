@@ -35,7 +35,7 @@ export function matchRealType(content: string): string {
  * @param content 内容
  * @returns 具体的值
  */
-export function compute$Label(content: string, smartLabel?: boolean): string {
+export function computeLabel(content: string, smartLabel?: boolean): string {
   const matchVarReg = /(\S*[^`'"])$/
   const matchVar = content.match(matchVarReg)
   if ((!matchVar || !Number.isNaN(Number(content))) && smartLabel) {

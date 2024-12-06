@@ -4,7 +4,7 @@ import type { IOption } from './types'
 import { CompletionProvider } from './provider'
 import defaultLanguages from './defaultLanguages'
 import defaultOptions from './defaultOptions'
-import { compute$Label, matchRealType } from './utils'
+import { computeLabel, matchRealType } from './utils'
 
 /**
  * 设置补全指令
@@ -40,7 +40,7 @@ function setDocumentCommand() {
       } = {
         $simple: matchRealType(content).substring(0, 3),
         $stamp: matchRealType(content),
-        $label: compute$Label(content, option.smartLabel),
+        $label: computeLabel(content, option.smartLabel),
         $value: content,
       }
       const formatReg = new RegExp(Object.keys(format).map((m: string) => `\\${m}`).join('|'), 'g')
