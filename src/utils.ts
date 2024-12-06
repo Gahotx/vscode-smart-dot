@@ -46,7 +46,12 @@ export function compute$Label(content: string, smartLabel?: boolean): string {
     return content
   }
   else if (matchVar) {
-    return `'${content}'`
+    if (content.includes(`'`) || content.includes(`"`)) {
+      return `\`${content}\``
+    }
+    else {
+      return `'${content}'`
+    }
   }
   else {
     return JSON.stringify(content)
