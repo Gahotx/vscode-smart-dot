@@ -26,8 +26,9 @@ pnpm run publish:openvsx
 environment variable. The `Gahotx` namespace must also be created and claimed
 on [Open VSX](https://open-vsx.org/). Publishing is possible while the
 ownership claim is pending, but the extension remains unverified until the
-claim is approved. For the tag-based GitHub Actions release, add the token as
-a repository secret named `OVSX_PAT`.
+claim is approved. For the tag-based GitHub Actions release, add the token as a repository secret
+named `OVSX_PAT`. To publish to the VS Code Marketplace from Actions, also add
+a Visual Studio Marketplace token as the `VSCE_PAT` repository secret.
 
 To publish to both marketplaces after bumping the version, run:
 

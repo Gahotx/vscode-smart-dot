@@ -45,3 +45,25 @@ jobs:
       - run: pnpm run publish:openvsx
         env:
           OVSX_PAT: ${{ secrets.OVSX_PAT }}
+
+  publish-vscode:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.7.1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - run: pnpm run publish:vscode
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
