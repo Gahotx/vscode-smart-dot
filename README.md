@@ -6,11 +6,34 @@
 
 <p align="center">
 <a href="https://marketplace.visualstudio.com/items?itemName=Gahotx.smart-dot" target="__blank"><img src="https://img.shields.io/visual-studio-marketplace/v/Gahotx.smart-dot.svg?color=eee&amp;label=VS%20Code%20Marketplace&logo=visual-studio-code" alt="Visual Studio Marketplace Version" /></a>
+<a href="https://open-vsx.org/extension/Gahotx/smart-dot" target="__blank"><img src="https://img.shields.io/open-vsx/v/Gahotx/smart-dot.svg?color=eee&amp;label=Open%20VSX&logo=visual-studio-code" alt="Open VSX Version" /></a>
 </p>
 
 <p align="center">
 Code completion with smart dot<br>
 </p>
+
+## Publishing
+
+The extension can be published to both marketplaces:
+
+```bash
+pnpm run publish:vscode
+pnpm run publish:openvsx
+```
+
+`publish:openvsx` requires an Open VSX personal access token in the `OVSX_PAT`
+environment variable. The `Gahotx` namespace must also be created and claimed
+on [Open VSX](https://open-vsx.org/). Publishing is possible while the
+ownership claim is pending, but the extension remains unverified until the
+claim is approved. For the tag-based GitHub Actions release, add the token as
+a repository secret named `OVSX_PAT`.
+
+To publish to both marketplaces after bumping the version, run:
+
+```bash
+pnpm run release
+```
 
 ## Usage Examples
 

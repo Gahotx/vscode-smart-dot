@@ -2,7 +2,7 @@
   "publisher": "Gahotx",
   "name": "smart-dot",
   "displayName": "Smart Dot",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "private": true,
   "packageManager": "pnpm@9.7.1",
   "description": "Code completion with smart dot",
@@ -60,11 +60,14 @@
     "update": "vscode-ext-gen --output src/generated/meta.ts",
     "lint": "eslint .",
     "vscode:prepublish": "nr build",
-    "publish": "vsce publish --no-dependencies",
+    "publish": "nr publish:vscode",
+    "publish:vscode": "vsce publish --no-dependencies",
+    "publish:openvsx": "ovsx publish --no-dependencies",
+    "publish:all": "nr publish:vscode && nr publish:openvsx",
     "pack": "vsce package --no-dependencies",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
-    "release": "bumpp && nr publish"
+    "release": "bumpp && nr publish:all"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.26.0",
@@ -75,6 +78,7 @@
     "bumpp": "^9.5.1",
     "eslint": "^9.9.0",
     "esno": "^4.7.0",
+    "ovsx": "1.4.0",
     "pnpm": "^9.7.1",
     "reactive-vscode": "^0.2.0",
     "tsup": "^8.2.4",
